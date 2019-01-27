@@ -1,21 +1,157 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id='section1' class='ticket_away'>
+  <div class='top'>
 
-<router-outlet></router-outlet>
+  </div>
+  <header>
+    <ul class='main_nav'>
+      <li class='nav_item'>
+        <a href='#section1' (click)='changeNavitem(1)'>
+          <div class='navitem_icon'>
+            <img src='assets/airplane.png'>
+            <div class='navitem_text' [ngClass]="navitem === 1 ? 'active': 'navitem_text'"> TICKET AWAY </div>
+          </div>
+        </a>
+      </li>
+      <li class='nav_item'>
+        <a href='#section2' (click)='changeNavitem(2)'>
+          <div class='navitem_icon'>
+            <img src='assets/fish.png'>
+            <div class='navitem_text' [ngClass]="navitem === 2 ? 'active': 'navitem_text'"> FISHING CAMP </div>
+          </div>
+        </a>
+      </li>
+      <li class='nav_item'>
+        <a href='#section3' (click)='changeNavitem(3)'>
+          <div class='navitem_icon'>
+            <img src='assets/coffe.png'>
+            <div class='navitem_text' [ngClass]="navitem === 3 ? 'active': 'navitem_text'"> THE AROMAS </div>
+          </div>
+        </a>
+      </li>
+      <li class='nav_item'>
+        <a href='#section4' (click)='changeNavitem(4)'>
+          <div class='navitem_icon'>
+            <img src='assets/hacker.png'>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <i class="fas fa-bars"></i>
+  </header>
+  <div class='ticketaway_article'>
+    <h1>
+      A TRAVELS YEAR BOOK
+    </h1>
+    <p>
+      Read Fodor's reviews to find the best travel
+      destinations, hotels and restaurants. Plan your
+      trip online with Fodor's. India bristles with a
+      mind-stirring mix of landscapes and cultural
+      traditions.Your journey through this
+      intoxicating country will blaze in your memory
+      long after you've left its shores.
+    </p>
+  </div>
+</div>
+<div id='section2' class='fishing_camp'>
+  <div class='top'>
+
+  </div>
+  <div class='dish_container1'>
+    <ul class='fishdish_list'>
+        <li class='dishrow1'>
+          <div>
+            <img src='assets/dish1.png'>
+          </div>
+        </li>
+        <li class='dishrow2'>
+          <div>
+              <img src='assets/dish2.png'>
+          </div>
+        </li>
+        <li class='dishrow2'>
+          <div>
+            <img src='assets/dish3.png'>
+          </div>
+        </li>
+    </ul>
+  </div>
+  <div class='dish_container2'>
+    <div class='dish_types'>
+        <div class='row1'>
+            <ul>
+              <li>
+                <div>
+                    <img src='assets/soups.png'>
+                    <div class='soups'>Soups</div>
+                </div>
+              </li>
+              <li>
+                <div>
+                    <img src='assets/mainsources.png'>
+                    <div class='maincourses'>Main Courses</div>
+                </div>
+              </li>
+              <li>
+                <div>
+                    <img src='assets/sidedishes.png'>
+                    <div class='sidedishes'>Side Dishes</div>
+                </div>
+              </li>
+            </ul>
+        </div>
+        <div class='row2'>
+          <ul>
+            <li>
+              <div>
+                <img src='assets/salads.png'>
+                <div class='salads'>Salads</div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src='assets/pies.png'>
+                <div class='pies'>Pies</div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <img src='assets/desserts.png'>
+                <div class='desserts'>Desserts</div>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class='dish_desc'>
+        LOVE. FOOD. CHEFS. RECIPES & THE FISH IN SEA
+    </div>
+  </div>
+</div>
+<div class='aromas' id='section3'>
+    <div class='top'>
+    </div>
+    <div class='letswalk'>
+      <h1>LET'S WALK THE DISTANCE</h1>
+      <h6>AND CHAT, CONNECT AND COFFEE OVER IT</h6>
+    </div>
+    <div class='social_icons'>
+        <div>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <div>
+            <i class="fab fa-facebook-square"></i>
+        </div>
+        <div>
+            <i class="fab fa-google-plus-square"></i>
+        </div>
+        <div>
+            <i class="fab fa-linkedin"></i>
+        </div>
+    </div>
+</div>
+<footer class='footer' id='section4'>
+    <div class='top'></div>
+    <p>10, 3rd floor, phonex crescent, resthouse road, bangalore 560 001</p>
+    <p class='phone'>Phone: +91 80 4098 6191</p>
+</footer>

@@ -1,0 +1,557 @@
+
+//less variables
+@width: 100%;
+@height: 100%;
+
+.shown {
+  left: 0;
+}
+ul, li, div, h1, h6, a, header, p, img {
+  margin: 0;
+  padding: 0;
+}
+.active {
+  font-weight: 900;
+}
+.top {
+  height: 1px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+.ticket_away {
+  margin: 0;
+  padding: 0;
+  background-image: url('../assets/1.jpg');
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
+  box-sizing: border-box;
+  width: @width;
+  height: @height;
+}
+.ticketaway_article {
+  color: white;
+}
+.fishing_camp {
+  .ticket_away(); //less mixins
+  background-image: url('../assets/2.jpg');
+}
+.aromas {
+  .ticket_away(); //less mixins
+  background-image: url('../assets/3.jpg');
+}
+.footer {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(139, 5, 5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  width: @width;
+  height: @height/2;
+}
+.dish_types li {
+  border-radius: 50%;
+  padding: 7px;
+  color: white;
+}
+.dish_types li:hover {
+  border: 1px solid white;
+  background-color: rgba(238, 230, 230, 0.7);
+}
+.letswalk {
+  max-width: 60%;
+  margin-top: 14%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.letswalk h1 {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 1px;
+  font-size: 3.5em;
+  @media (max-width: 550px) {
+    font-size: 2.5em;
+  }
+  @media (max-width: 330px) {
+    font-size: 1.5em;
+  }
+}
+.letswalk h6 {
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-top: 1px;
+  padding: 1px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  @media (max-width: 330px) {
+    font-size: 1em;
+  }
+  font-weight: 50;
+}
+.social_icons {
+  max-width: 45%;
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  @media (max-width: 319px) {
+    display: block;
+  }
+}
+.social_icons div {
+  width: 25%;
+}
+.social_icons div i {
+  background-color: white;
+  padding: 12%;
+  font-size: 2em;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.social_icons div i:hover {
+  background-color: rgb(245, 65, 65);
+}
+.footer p {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+.phone {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (max-width: 449px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: -120px;
+    font-size: 0.8em;
+    background-color: rgba(7, 7, 7, 0.7);
+    height: 100%;
+    width: 120px;
+    transition: .3s;
+    ul {
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+    .navitem_text {
+      font-size: 1em;
+      text-align: center;
+    }
+    .fa-bars {
+      position: absolute;
+      top: 0;
+      right: -50px;
+      width: 50px;
+      height: 50px;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 2em;
+      color: white;
+    }
+  }
+  .ticketaway_article {
+    margin-top: 15%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fishing_camp {
+    height: 170%;
+    @media (min-width: 250px) {
+      height: 100%;
+    }
+    .dish_container1 {
+      width: @width;
+      li {
+        .dishrow2 {
+          display: inline-block;
+        }
+        width: @width;
+        margin-bottom: 2px;
+        img {
+          display: block;
+          margin: auto;
+          width: @width;
+          max-width: 160px;
+          max-height: 90px;
+        }
+      }
+    }
+    .dish_types li {
+      width: 50%;
+      margin: auto;
+      img {
+        display: block;
+        margin: auto;
+        width: 40%;
+        max-width: 160px;
+        max-height: 90px;
+      }
+      .soups, .salads, .sidedishes, .maincourses, .salads, .pies, .desserts {
+        text-align: center;
+        margin-top: 5px;
+      }
+    }
+    .dish_desc {
+      width: 80%;
+      display: block;
+      margin: auto;
+      font-size: 1em;
+      color: rgb(1, 54, 1);
+      text-align: right;
+      font-weight: 700;
+    }
+    @media (min-width: 250px) {
+      .dish_container1 {
+        margin-top: 10%;
+        width: 90%;
+        margin-left: 10%;
+        ul {
+          width: @width;
+          li {
+            display: inline-block;
+            margin-right: 2%;
+          }
+          .dishrow1 {
+              width: 30%;
+              img {
+                max-width: 160px;
+                max-height: 120px;
+                width: 100%;
+              }
+          }
+          .dishrow2{
+             width: 15%;
+             img {
+              max-width: 120px;
+              max-height: 120px;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .dish_container2 {
+        width: 90%;
+        margin-left: 10%;
+        .dish_types {
+          width: 70%;
+          margin: 0;
+          padding: 0;
+          display: inline-block;
+          max-width: 300px;
+          .row1, .row2 {
+            width: @width;
+            font-size: 0.7em;
+            ul {
+              width: @width;
+              li {
+                display: inline-block;
+                width: 32%;
+                box-sizing: border-box;
+                div {
+                  width: 90%;
+                  box-sizing: border-box;
+                  img {
+                    margin-left: auto;
+                    display: block;
+                    margin-right: auto;
+                  }
+                  .soups, .salads, .sidedishes, .maincourses, .salads, .pies, .desserts {
+                    text-align: center;
+                    margin-top: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .dish_desc {
+        width: 30%;
+        @media (min-width: 650px) {
+          width: 45%;
+        }
+        font-size: 4vw;
+        display: inline-block;
+        color: rgb(1, 54, 1);
+        max-width: 380px;
+        text-align: right;
+        font-weight: 700;
+      }
+    }
+  }
+}
+@media screen and (min-width: 450px) and (max-width: 799px) {
+  header {
+    width: 100%;
+    min-height: 66px;
+    position: fixed;
+    overflow: hidden;
+  }
+  .fa-bars {
+    display: none;
+  }
+  .nav_item {
+    display: inline-block;
+    .navitem_icon {
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+  }
+  .navitem_text {
+    font-size: 1em;
+    text-align: center;
+  }
+  .ticket_away {  //less nested
+    header {
+      ul {
+        width: @width;
+        .nav_item {
+          width: @width/4; //less operations
+        }
+      }
+      font-size: 0.7em;
+    }
+    .ticketaway_article {
+      margin-top: 25%;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      h1 {
+        font-size: 7vw;
+        font-weight: 1000;
+      }
+      p {
+        margin-top: 3%;
+        font-size: 3vw;
+      }
+    }
+  }
+  .fishing_camp {
+    .dish_container1 {
+      margin-top: 10%;
+      width: 85%;
+      margin-left: 15%;
+      ul {
+        width: @width;
+        li {
+          display: inline-block;
+          margin-right: 2%;
+        }
+
+        .dishrow1 {
+            width: 30%;
+            img {
+              max-width: 160px;
+              max-height: 120px;
+              width: 100%;
+            }
+        }
+        .dishrow2{
+           width: 15%;
+           img {
+            max-width: 120px;
+            max-height: 120px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .dish_container2 {
+      width: 85%;
+      margin-left: 15%;
+      .dish_types {
+        width: 70%;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        max-width: 300px;
+        .row1, .row2 {
+          width: @width;
+          font-size: 0.7em;
+          ul {
+            width: @width;
+            li {
+              display: inline-block;
+              width: 32%;
+              box-sizing: border-box;
+              div {
+                width: 90%;
+                box-sizing: border-box;
+                img {
+                  margin-left: auto;
+                  display: block;
+                  margin-right: auto;
+                }
+                .soups, .salads, .sidedishes, .maincourses, .salads, .pies, .desserts {
+                  text-align: center;
+                  margin-top: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .dish_desc {
+        width: 30%;
+        @media (min-width: 650px) {
+          width: 45%;
+        }
+        font-size: 4vw;
+        display: inline-block;
+        color: rgb(1, 54, 1);
+        max-width: 380px;
+        text-align: right;
+        font-weight: 700;
+      }
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  header {
+    width: 100%;
+    min-height: 66px;
+    position: fixed;
+    overflow: hidden;
+  }
+  .fa-bars {
+    display: none;
+  }
+  .nav_item {
+    display: inline-block;
+    .navitem_icon {
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+    }
+  }
+  .navitem_text {
+    font-size: 1em;
+    text-align: center;
+  }
+  .ticket_away {
+    header {
+      ul {
+        width: 40%;
+        margin-left: 55%;
+        .nav_item {
+          width: 25%;
+        }
+      }
+      font-size: 1vw;
+    }
+    .ticketaway_article {
+      margin-top: 15%;
+      max-width: 400px;
+      width: 50%;
+      margin-left: 20%;
+      h1 {
+        font-weight: 1000;
+        font-size: 50px;
+      }
+      p {
+        margin-top: 3%;
+        font-size: 1em;
+      }
+    }
+  }
+  .fishing_camp {
+    .dish_container1 {
+      margin-top: 5%;
+      width: 80%;
+      max-width: 1000px;
+      margin-left: 20%;
+      ul {
+        width: @width;
+        li {
+          display: inline-block;
+          margin-right: 2%;
+        }
+        .dishrow1 {
+            width: 30%;
+            img {
+              width: 100%;
+            }
+        }
+        .dishrow2{
+           width: 15%;
+           img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .dish_container2 {
+      width: 80%;
+      margin-left: 20%;
+      .dish_types {
+        width: 70%;
+        margin: 0;
+        margin-top: 4%;
+        padding: 0;
+        display: inline-block;
+        max-width: 400px;
+        .row1, .row2 {
+          width: @width;
+          margin-bottom: 5px;
+          font-size: 0.9em;
+          ul {
+            width: @width;
+            li {
+              display: inline-block;
+              width: 32%;
+              margin-right: 1%;
+              box-sizing: border-box;
+              div {
+                width: 90%;
+                box-sizing: border-box;
+                img {
+                  margin-left: auto;
+                  display: block;
+                  margin-right: auto;
+                }
+                .soups, .salads, .sidedishes, .maincourses, .salads, .pies, .desserts {
+                  text-align: center;
+                  margin-top: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .dish_desc {
+        margin: 0;
+        width: 40%;
+        @media (max-width: 850px) {
+          width: 30%;
+        }
+        font-size: 3vw;
+        display: inline-block;
+        color: rgb(1, 54, 1);
+        max-width: 400px;
+        text-align: right;
+        font-weight: 700;
+      }
+    }
+  }
+}
