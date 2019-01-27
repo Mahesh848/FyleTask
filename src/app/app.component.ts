@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
     $(document).ready(function() {
       $('.fa-bars').click(function() {
         $('header').toggleClass('shown');
-        console.log($('header'));
       });
     });
   }
